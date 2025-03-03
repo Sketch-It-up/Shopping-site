@@ -11,12 +11,14 @@ import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import AllProducts from "./components/Products/AllProducts/AllProducts";
 import SingleProducts from "./components/SingleProducts/SingleProducts";
+import Header2 from "./components/Header/Header2";
+import Footer2 from "./components/Footer/Footer2";
 
 function App() {
   return (
     <>
       <Router>
-        <Header />
+        <Header2 />
         {/* <SingleProducts/> */}
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,7 +28,7 @@ function App() {
 
         </Routes>
       <NewsLetter/>
-      <Footer/>
+      <Footer2/>
       </Router>
     </>
   );

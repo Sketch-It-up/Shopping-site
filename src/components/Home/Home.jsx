@@ -10,8 +10,8 @@ import SingleProducts from '../SingleProducts/SingleProducts'
 const Home = () => {
   return (
     <div>
-      <SingleProducts/>
       <Banner />
+      <SingleProducts/>
       <Category />
       <Products />
       <NewArrivals />

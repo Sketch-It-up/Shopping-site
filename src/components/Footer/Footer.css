@@ -1,0 +1,128 @@
+.footer {
+    background-color: black;
+    color: #bcbcbc;
+    font-size: 14px;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Top section layout */
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    text-align: center;
+  }
+  
+  .footer-title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .footer-subtitle {
+    margin-top: 5px;
+  }
+  
+  /* Center section */
+  .footer-center {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .footer-heading {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footer-center ul,
+  .footer-right ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-center ul li,
+  .footer-right ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-center ul li a,
+  .footer-right ul li a {
+    color: #bcbcbc;
+    text-decoration: none;
+  }
+  
+  .footer-center ul li a:hover,
+  .footer-right ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Contact section */
+  .footer-email {
+    color: #4fa3ff;
+    text-decoration: none;
+  }
+  
+  .footer-email:hover {
+    text-decoration: underline;
+  }
+  
+  /* Social media icons */
+  .footer-social {
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .footer-social img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-social img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Copyright */
+  .footer-copyright {
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .footer-top {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  
+    .footer-left,
+    .footer-right {
+      text-align: left;
+    }
+  
+    .footer-center {
+      flex-direction: row;
+      gap: 50px;
+    }
+  }
+  
