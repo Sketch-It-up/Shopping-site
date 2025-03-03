@@ -1,19 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./Header.css";
 
-function Header() {
+function Header() { 
+  const [scrolled,setscrolled] = useState(false);
+  
+  const HandleScroll = () => {
+    const offsets = window.scrollY;
+
+    if(offsets > 200) {
+      setscrolled(true);
+    } else {
+      setscrolled(false);
+    }
+  } ;
+
+  useEffect(() => {
+    window.addEventListener('scroll',HandleScroll)
+  },[]);
+
   return (
     <>
-      <nav className="navbar navbar-expand-lg">
+      <nav className={`navbar navbar-expand-lg nav_sec1 ${scrolled ? "sticky_nav1" : ""}`}>
         <div className="container-fluid">
           <NavLink to="/">
             <img src={logo} alt="logo" className="navbar-logo" />
           </NavLink>
           <button
-            className="navbar-toggler"
+            className="navbar-toggler border-0"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -21,7 +37,13 @@ function Header() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+          <img 
+            src="   https://cdn-icons-png.flaticon.com/512/16159/16159353.png " 
+            width="30" 
+            height="30" 
+            alt="" 
+            title="" 
+            class="img-small"></img>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-lg-0 nav_ul">
@@ -35,7 +57,7 @@ function Header() {
                 <NavLink to="/products">Products</NavLink>
               </li>
               <li className="nav-li">
-                <NavLink to="/contact">Contact</NavLink>
+                <NavLink to="/contact">Contact Us</NavLink>
               </li>
             </ul>
 
