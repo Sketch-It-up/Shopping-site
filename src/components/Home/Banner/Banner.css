@@ -46,3 +46,15 @@
     color: #ff3971;
     font-weight: 600;
 }
+
+.swiper-scrollbar{
+    display: none !important;
+}
+
+/* ******************************* */
+/* ******************************* */
+@media only screen and (min-width: 768px) and (max-width:567px){
+    .banner_col2 img{
+        width: 80%;
+    }
+}

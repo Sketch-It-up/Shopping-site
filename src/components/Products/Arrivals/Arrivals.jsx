@@ -12,7 +12,7 @@ const Arrivals = () => {
                     <img src={img} alt="" className="img-fluid"/>                  </div>
                 </div>
                 <div className="col-8">
-                    <div className="Arrivals_col2">
+                    <div className="Arrivals_col2 px-4">
                     <p className="Product_name">HeadPhones</p>
                     <div className="icons pb-2">
                         <i className="fa-solid fa-star"></i>

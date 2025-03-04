@@ -68,9 +68,9 @@ const Banner = () => {
                 <div className="container gx-0">
                     <div className="row gx-0 align-items-center">
                         <div className="col-md-12 col-lg-6 order-md-2"
-                                data-aos="fade-right"
-                                data-aos-duration="1000"
-                                data-aos-easing="ease-in-out"
+                                // data-aos="fade-right"
+                                // data-aos-duration="1000"
+                                // data-aos-easing="ease-in-out"
                             >
                             <div className="banner_col1 pt-md-4">
                                     <h6 className="Main_Label pb-3"> 
@@ -87,9 +87,9 @@ const Banner = () => {
                                 </div>
                         </div>
                         <div className="col-md-12 col-lg-6 order-md-1"
-                                    data-aos="fade-left"
-                                    data-aos-duration="1000"
-                                    data-aos-easing="ease-in-out"
+                                    // data-aos="fade-left"
+                                    // data-aos-duration="1000"
+                                    // data-aos-easing="ease-in-out"
                         >
                             <div className="banner_col1">
                                 <img src={img2} alt="" className="img-fluid" />

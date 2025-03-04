@@ -7,7 +7,7 @@ const NewArrivals = () => {
     return (
         <div>
             <div className="container gx-0 py-5">
-                <h2 className='pb-5'>New Arrivals</h2>
+                <h2 className='pb-5 main_h2'>New Arrivals</h2>
                 <div className="row align-items-center">
                     <div className="col-md-6">
                         <div className="NewArrival_col1">

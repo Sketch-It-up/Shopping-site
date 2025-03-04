@@ -5,10 +5,10 @@ import "./Discount.css"
 const Discount = () => {
   return (
     <div>
-      <div className="container Discount px-5 my-5">
+      <div className="container Discount px-5 py-3 my-5">
         <div className="row align-items-center">
           <div className="col-md-6">
-            <div className="Discount_col1 pt-md-4">
+            <div className="Discount_col1 pt-4">
               <h6 className="Main_Label pb-3">
                 <i className="fa-solid fa-star"></i> Top Products Of The Month</h6>
               <h2>
@@ -23,7 +23,7 @@ const Discount = () => {
             </div>
 
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6 pt-3">
             <img src={img} alt="" className="img-fluid"/>
           </div>
         </div>

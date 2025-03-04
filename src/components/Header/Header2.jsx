@@ -50,7 +50,7 @@ const Header2 = () => {
       {menuOpen && (
         <nav className="mobile-nav">
           <a href="/" onClick={toggleMenu}>Home</a>
-          <a href="/products" onClick={toggleMenu}>products</a>
+          <a href="/products" onClick={toggleMenu}>Products</a>
           <a href="/about" onClick={toggleMenu}>About </a>
           <a href="/contact" onClick={toggleMenu}>Contact</a>
         </nav>
