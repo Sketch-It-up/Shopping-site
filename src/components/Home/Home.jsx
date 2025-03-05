@@ -24,11 +24,15 @@ const Home = () => {
       //console.log(res);
       setCategory(res);
     });
+
+    FetchDataFromAPI('api/products?populate=*').then((res) => {
+      console.log(res);
+    });
   };
 
   const getProducts = () => {
     FetchDataFromAPI('api/products?populate=*').then((res) => {
-      console.log(res);
+      //console.log(res);
       setProducts(res);
     });
   };
@@ -36,7 +40,7 @@ const Home = () => {
   return (
     <div>
       <Banner />
-      <SingleProducts/>
+      {/* <SingleProducts/> */}
       <Category category={category} />
       <Products products={products} />
       <NewArrivals />

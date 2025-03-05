@@ -7,7 +7,7 @@ const Products = ({ products }) => {
   return (
     <div>
       <div className="container gx-0 py-5">
-        <h2 className='Products_h2 pb-5 main_h2'>Popular Products</h2>
+        {/* <h2 className='Products_h2 pb-5 main_h2'>Popular Products</h2> */}
         <div className="row gx-0">
           <div className="col-md-12">
             <div className="Products_main">

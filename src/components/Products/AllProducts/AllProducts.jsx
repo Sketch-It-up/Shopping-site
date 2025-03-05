@@ -1,10 +1,10 @@
 import React from 'react'
 import Products from '../Products'
 
-const AllProducts = () => {
+const AllProducts = ({data}) => {
   return (
     <div>
-      <Products />
+      <Products products={data} />
     </div>
   )
 }

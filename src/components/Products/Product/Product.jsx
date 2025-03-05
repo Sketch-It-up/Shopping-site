@@ -1,11 +1,13 @@
 import React from 'react';
 import './Product.css';
+import { useNavigate } from 'react-router-dom';
 
 const Product = ({ id, title, description, price, img }) => {
+  const navigate = useNavigate();
   const imageUrl = img?.url || ''; // Handle case where img or img.url might be undefined
   return (
-    <div className="">
-      <div className="Product_main">
+    <div className="Product_main">
+      <div className="col" onClick={() => navigate(`/product/${id}`)}>
         <div className="card border-0 ">
           <div className="card_head">
             <img src={"http://localhost:1337/admin" + imageUrl} alt={title} className="img-fluid" />

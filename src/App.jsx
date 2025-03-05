@@ -14,6 +14,7 @@ import SingleProducts from "./components/SingleProducts/SingleProducts";
 import Header2 from "./components/Header/Header2";
 import Footer2 from "./components/Footer/Footer2";
 import AppContext from "./utils/context";
+import Category from "./components/Category/Category";
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<AllProducts />} />
+            <Route path="/product/:id" element={<SingleProducts></SingleProducts>} />
+            <Route path="/category/:id" element={<Category />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
           <NewsLetter />
