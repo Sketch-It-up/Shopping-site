@@ -1,11 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import newlogo from "../../assets/logo11.png";
-import SocialX from "../../assets/social-x.svg";
-import SocialInsta from "../../assets/social-insta.svg";
-import SocialLinkedIn from "../../assets/social-linkedin.svg";
-import SocialPin from "../../assets/social-pin.svg";
-import SocialYoutube from "../../assets/social-youtube.svg";
+
 
 const Footer2 = () => {
   return (

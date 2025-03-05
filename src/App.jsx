@@ -13,22 +13,24 @@ import AllProducts from "./components/Products/AllProducts/AllProducts";
 import SingleProducts from "./components/SingleProducts/SingleProducts";
 import Header2 from "./components/Header/Header2";
 import Footer2 from "./components/Footer/Footer2";
+import AppContext from "./utils/context";
 
 function App() {
   return (
     <>
       <Router>
-        <Header2 />
-        {/* <SingleProducts/> */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/products" element={<AllProducts />} />
-          <Route path="/contact" element={<Contact />} />
-
-        </Routes>
-      <NewsLetter/>
-      <Footer2/>
+        <AppContext>
+          <Header2 />
+          {/* <SingleProducts/> */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/products" element={<AllProducts />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+          <NewsLetter />
+          <Footer2 />
+        </AppContext>
       </Router>
     </>
   );
