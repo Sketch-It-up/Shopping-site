@@ -2,16 +2,32 @@ import React from "react";
 import "./SingleProducts.css";
 import useFetch from "../../hooks/useFetch";
 import { useParams } from "react-router-dom";
+import { useState, useContext } from "react";
+import { Context } from "../../utils/context";
 
 const SingleProducts = () => {
+
+  const[quantity, setQuantity] = useState(1);
   const { id } = useParams();
   const { data, loading, error } = useFetch(`api/products?populate=*&filters[id]=${id}`);
+
+  const {handleAddToCart} = useContext(Context);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
 
   const product = data?.data?.[0];
   const imageUrl = product?.img?.url ? `http://localhost:1337${product.img.url}` : "";
+
+  const incerment = () =>{
+    setQuantity ((prevState) =>prevState + 1);
+  }
+  const decrement = () => {
+    setQuantity ((prevState) =>{
+      if(prevState === 1) return 1;
+      return prevState -1 ;
+    });
+  }
 
   return (
     <div>
@@ -32,11 +48,14 @@ const SingleProducts = () => {
               <p className="single_Product-description">{product?.description}</p>
               <div className="carts-button">
                 <div className="quality-buttons my-4 py-3">
-                  <span className="single-span">-</span>
-                  <input className="remove-arrow" placeholder="1" type="number" min="1" />
-                  <span className="single-span">+</span>
+                  <span className="single-span mx-1" onClick={decrement}>-</span>
+                  <span className="single-span mx-1">{quantity}</span>
+                  {/* <input className="remove-arrow" placeholder="1" type="number" min="1" /> */}
+                  <span className="single-span mx-1" onClick={incerment}>+</span>
                 </div>
-                <button className="btn3 py-3">
+                <button className="btn3 py-3" onClick = {()=>{
+                  handleAddToCart(product, quantity);
+                }}>
                   <i className="fa-solid fa-cart-shopping pe-2 fs-5"></i>
                   ADD TO CART
                 </button>

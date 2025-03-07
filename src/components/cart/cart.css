@@ -1,0 +1,101 @@
+/* Overlay styling */
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0; /* Ensure the overlay covers the entire screen */
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 9999; /* Ensure the overlay is on top of other elements */
+  }
+  
+  /* Cart container */
+  .cart-container {
+    width: 350px;
+    height: 100%;
+    background: white !important;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 9999;
+  }
+  
+  /* Header */
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Close button */
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Cart body */
+  .cart-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Cart items */
+  .cart-item {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Empty cart styling */
+  .empty-cart {
+    text-align: center;
+  }
+  
+  .empty-cart img {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+  
+  .empty-cart h6 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .empty-cart p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .continue-btn {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .continue-btn:hover {
+    background: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 400px) {
+    .cart-container {
+      width: 100%;
+    }
+  }

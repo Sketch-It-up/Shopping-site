@@ -1,17 +1,25 @@
-// header.jsx
-import { useState } from "react";
+// filepath: d:\College_VIT\09_sketchitup\Dental-Ecommerce\Doctor-portfolio\E-commerce2\FrontEnd\src\components\Header\Header2.jsx
+import { useState, useContext } from "react";
 import "./header2.css";
 import newlogo from "../../assets/logo11.png";
-//import newlogo from "./assets/images/logo11.png";
 import MenuIcon from "../../assets/Menu_.png";
 import CloseIcon from "../../assets/Menu_.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { NavLink } from "react-router-dom";
+import { Context } from "../../utils/context";
+import Cart from "../cart/Cart";
 
 const Header2 = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
+  const { cartCount } = useContext(Context);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const toggleCart = () => {
+    setCartOpen(!cartOpen);
   };
 
   return (
@@ -35,14 +43,14 @@ const Header2 = () => {
           <a href="/contact">Contact</a>
 
           <div className="d-flex align-items-center">
-              <a to="/search" className="nav-icon">
-                <i className="fas fa-search"></i>
-              </a>
-              <a to="/cart" className="nav-icon">
-                <i className="fas fa-shopping-cart"></i>
-              </a>
-            </div>
-
+            <NavLink to="/search" className="nav-icon">
+              <i className="fas fa-search"></i>
+            </NavLink>
+            <i
+              className="fas fa-shopping-cart nav-icon"
+              onClick={toggleCart}
+            ></i>
+          </div>
         </nav>
       </div>
 
@@ -51,10 +59,13 @@ const Header2 = () => {
         <nav className="mobile-nav">
           <a href="/" onClick={toggleMenu}>Home</a>
           <a href="/products" onClick={toggleMenu}>Products</a>
-          <a href="/about" onClick={toggleMenu}>About </a>
+          <a href="/about" onClick={toggleMenu}>About</a>
           <a href="/contact" onClick={toggleMenu}>Contact</a>
         </nav>
       )}
+
+      {/* Cart Overlay */}
+      {cartOpen && <Cart toggleCart={toggleCart} />}
     </header>
   );
 };
