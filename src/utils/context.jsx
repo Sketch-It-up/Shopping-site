@@ -6,7 +6,10 @@ export const Context = createContext();
 const AppContext = ({ children }) => {
     const [products, setProducts] = useState();
     const [category, setCategory] = useState();
-    const [cartItems, setCartItems] = useState([]);
+    const [cartItems, setCartItems] = useState(() => {
+        const savedCartItems = localStorage.getItem('cartItems');
+        return savedCartItems ? JSON.parse(savedCartItems) : [];
+    });
     const [cartCount, setCartCount] = useState(0);
     const [cartSubTotal, setCartSubTotal] = useState(0);
 
@@ -24,6 +27,8 @@ const AppContext = ({ children }) => {
         let subTotal = 0;
         cartItems.forEach((item) => (subTotal += item.price * item.quantity));
         setCartSubTotal(subTotal);
+
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
     }, [cartItems]);
 
     const handleAddToCart = (product, quantity) => {

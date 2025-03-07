@@ -1,11 +1,11 @@
-// filepath: d:\College_VIT\09_sketchitup\Dental-Ecommerce\Doctor-portfolio\E-commerce2\FrontEnd\src\components\cart\Cart.jsx
 import React from "react";
 import { Context } from "../../utils/context";
 import { useContext } from "react";
 import "./cart.css";
+import CartItems from "./CartItems/CartItems";
 
 const Cart = ({ toggleCart }) => {
-  const { cartItems, setCartItems } = useContext(Context);
+  const { cartItems, cartSubTotal } = useContext(Context);
 
   return (
     <div className="cart-overlay">
@@ -16,12 +16,16 @@ const Cart = ({ toggleCart }) => {
         </div>
         <div className="cart-body">
           {cartItems.length > 0 ? (
-            cartItems.map((item) => (
-              <div className="cart-item" key={item.id}>
-                <h6>{item.title}</h6>
-                <p>${item.price}</p>
+            <>
+              <CartItems />
+              <div className="cart-total">
+                <h6>Total: ${cartSubTotal}</h6>
               </div>
-            ))
+
+              <button className="btn3 py-3" >
+                  Checkout
+                </button>
+            </>
           ) : (
             <div className="empty-cart">
               <img src="https://cdn-icons-png.flaticon.com/512/13637/13637462.png" alt="Empty Cart" />

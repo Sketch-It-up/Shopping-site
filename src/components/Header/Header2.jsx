@@ -1,4 +1,3 @@
-// filepath: d:\College_VIT\09_sketchitup\Dental-Ecommerce\Doctor-portfolio\E-commerce2\FrontEnd\src\components\Header\Header2.jsx
 import { useState, useContext } from "react";
 import "./header2.css";
 import newlogo from "../../assets/logo11.png";
@@ -7,19 +6,13 @@ import CloseIcon from "../../assets/Menu_.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { NavLink } from "react-router-dom";
 import { Context } from "../../utils/context";
-import Cart from "../cart/Cart";
 
-const Header2 = () => {
+const Header2 = ({ toggleCart }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [cartOpen, setCartOpen] = useState(false);
   const { cartCount } = useContext(Context);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-  };
-
-  const toggleCart = () => {
-    setCartOpen(!cartOpen);
   };
 
   return (
@@ -61,11 +54,8 @@ const Header2 = () => {
           <a href="/products" onClick={toggleMenu}>Products</a>
           <a href="/about" onClick={toggleMenu}>About</a>
           <a href="/contact" onClick={toggleMenu}>Contact</a>
-        </nav>
+        </nav>      
       )}
-
-      {/* Cart Overlay */}
-      {cartOpen && <Cart toggleCart={toggleCart} />}
     </header>
   );
 };

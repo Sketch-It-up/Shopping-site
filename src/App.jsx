@@ -15,24 +15,33 @@ import Header2 from "./components/Header/Header2";
 import Footer2 from "./components/Footer/Footer2";
 import AppContext from "./utils/context";
 import Category from "./components/Category/Category";
+import Cart from "./components/cart/Cart";
+import { useState } from "react";
 
 function App() {
+  const [cartOpen, setCartOpen] = useState(false);
+
+  const toggleCart = () => {
+    setCartOpen(!cartOpen);
+  };
+
   return (
     <>
       <Router>
         <AppContext>
-          <Header2 />
+          <Header2 toggleCart={toggleCart} />
           {/* <SingleProducts/> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<AllProducts />} />
-            <Route path="/product/:id" element={<SingleProducts></SingleProducts>} />
+            <Route path="/product/:id" element={<SingleProducts />} />
             <Route path="/category/:id" element={<Category />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
           <NewsLetter />
           <Footer2 />
+          {cartOpen && <Cart toggleCart={toggleCart} />}
         </AppContext>
       </Router>
     </>
