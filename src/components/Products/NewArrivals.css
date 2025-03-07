@@ -6,8 +6,15 @@
 }
 
 .NewArrival_col1{
-    background: var(--light-color);
-    padding: 2rem 2rem 1rem 2rem;
+    /* background: var(--light-color); */
+    border: var(--light-color);
+    padding: 2rem 2rem 1rem 6rem;
+    align-items: center;
+}
+
+.NewArrival_col1 img{
+    width: 80%;
+    border-radius: 10px;
 }
 
 .Arrivals_col1 img{

@@ -1,5 +1,5 @@
 import React from 'react'
-import img from "../../../assets/blue_headphones.png"
+import img from "../../../assets/Images/Airoter_Product_1.jpg"
 import "../NewArrivals.css"
 
 const Arrivals = () => {
@@ -13,8 +13,8 @@ const Arrivals = () => {
                 </div>
                 <div className="col-8">
                     <div className="Arrivals_col2 px-4">
-                    <p className="Product_name">HeadPhones</p>
-                    <div className="icons pb-2">
+                    <p className="Product_name">Airoter Premium</p>
+                    <div className="icons ">
                         <i className="fa-solid fa-star"></i>
                         <i className="fa-solid fa-star"></i>
                         <i className="fa-solid fa-star"></i>

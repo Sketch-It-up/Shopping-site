@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Banner.css"
-import img1 from "../../../assets/black_headphones.png"
-import img2 from "../../../assets/blue_headphones.png"
+import img1 from "../../../assets/Images/still-life-medical-tools.png"
+import img2 from "../../../assets/Images/product-3.png"
 // src/assets/black_headphones.png
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -40,11 +40,10 @@ const Banner = () => {
                                     <h6 className="Main_Label pb-3"> 
                                         <i className="fa-solid fa-star"></i> Top Products Of The Month</h6>
                                     <h1>
-                                        Micropack MHP Headphone Black
+                                        Orthodontic Instruments
                                     </h1>
                                     <p className="py-3">
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus possimus minima illo ipsum, itaque voluptate praesentium dolore quaerat! Cum, excepturi perspiciatis iure laudantium cumque illo assumenda magni beatae saepe numquam!
-                                    </p>
+                                    Precision. Performance. Perfection. Explore our premium range of Orthodontic Instruments, crafted for accuracy and durability. Elevate your dental practice with tools designed for seamless orthodontic treatments. Shop now for the best in class!                                    </p>
                                     <div className="banner_btns">
                                         <button className="main_btn">Shop Now</button>
                                      </div>
@@ -76,10 +75,10 @@ const Banner = () => {
                                     <h6 className="Main_Label pb-3"> 
                                         <i className="fa-solid fa-star"></i> Top Products Of The Month</h6>
                                     <h1>
-                                        Micropack MHP Headphone Black
+                                        Dental Chair
                                     </h1>
                                     <p className="py-3">
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus possimus minima illo ipsum, itaque voluptate praesentium dolore quaerat! Cum, excepturi perspiciatis iure laudantium cumque illo assumenda magni beatae saepe numquam!
+                                    Experience Comfort & Innovation 🦷✨ Upgrade your dental practice with our ergonomically designed Dental Chair, built for precision, patient comfort, and seamless functionality. Enhance efficiency with advanced features tailored for modern dentistry.
                                     </p>
                                     <div className="banner_btns">
                                         <button className="main_btn">Shop Now</button>

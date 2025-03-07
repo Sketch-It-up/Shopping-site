@@ -1,5 +1,5 @@
 import React from 'react'
-import img from "../../../assets/mid_headphone.png"
+import img from "../../../assets/Images/lab-micro-motor-set.png"
 import "./Discount.css"
 
 const Discount = () => {
@@ -12,10 +12,10 @@ const Discount = () => {
               <h6 className="Main_Label pb-3">
                 <i className="fa-solid fa-star"></i> Top Products Of The Month</h6>
               <h2>
-                Micropack MHP Headphone Black
+                Lab Micro Motor Set
               </h2>
               <p className="py-3">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus possimus minima illo ipsum, itaque voluptate praesentium dolore quaerat! Cum, excepturi perspiciatis iure laudantium cumque illo assumenda magni beatae saepe numquam!
+              Power & Precision at Your Fingertips. Our Lab Micro Motor Set delivers high-speed performance, smooth control, and durability for all your dental and laboratory needs. Achieve precision in polishing, grinding, and cutting with ease. Shop now for seamless workflow!
               </p>
               <div className="banner_btns">
                 <button className="main_btn">Shop Now</button>
@@ -23,7 +23,7 @@ const Discount = () => {
             </div>
 
           </div>
-          <div className="col-md-6 pt-3">
+          <div className="col-md-6 pt-3 Discount_img">
             <img src={img} alt="" className="img-fluid"/>
           </div>
         </div>

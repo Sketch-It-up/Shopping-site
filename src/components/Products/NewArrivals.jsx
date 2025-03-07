@@ -1,5 +1,5 @@
 import React from 'react'
-import iphone from "../../assets/iphones.png"
+import iphone from "../../assets/Images/new_arrival - Copy.jpg"
 import "./NewArrivals.css"
 import Arrivals from './Arrivals/Arrivals'
 
@@ -11,10 +11,10 @@ const NewArrivals = () => {
                 <div className="row align-items-center">
                     <div className="col-md-6">
                         <div className="NewArrival_col1">
-                            <h3>IPhone 15 Pro Max</h3>
-                            <div className="banner_btns pt-3 ">
+                            {/* <h3>IPhone 15 Pro Max</h3> */}
+                            {/* <div className="banner_btns pt-3 ">
                                 <button className="main_btn">Shop Now</button>
-                            </div>
+                            </div> */}
                             <img src={iphone} alt="" className='img-fluid'/>
                         </div>
                     </div>
