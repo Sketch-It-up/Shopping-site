@@ -93,7 +93,7 @@ const Footer2 = () => {
 
         {/* Copyright */}
         <p className="footer-copyright">
-          &copy; 2024 SketchItUp, Inc. All rights reserved.
+          &copy; 2024 GurOm Dental, Inc. All rights reserved.
         </p>
       </div>
     </footer>

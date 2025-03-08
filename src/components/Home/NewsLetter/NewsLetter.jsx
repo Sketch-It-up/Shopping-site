@@ -3,7 +3,7 @@ import React from 'react'
 const NewsLetter = () => {
   return (
     <div>
-      <div className="NewsLetter pb-5">
+      <div className="NewsLetter pb-5 pt-3">
         <div className="container gx-0">
             <div className="row gx-0">
                 <div className="col-md-6">

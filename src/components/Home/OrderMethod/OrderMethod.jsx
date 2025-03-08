@@ -10,6 +10,7 @@ const OrderMethod = () => {
       <div className="Order">
         <div className="container gx-0 py-5">
             <div className="row gx-0 align-items-center">
+            <h2 className='pb-5 main_h2'>What We Provide</h2>
                 <div className="col-md-4">
                     <div className="order_col1">
                         <img src={img1} alt="img-fluid" />

@@ -2,6 +2,7 @@ import React from 'react'
 import "./Banner.css"
 import img1 from "../../../assets/Images/still-life-medical-tools.png"
 import img2 from "../../../assets/Images/product-3.png"
+import img3 from "../../../assets/Images/Banner_3.png"
 // src/assets/black_headphones.png
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -73,12 +74,12 @@ const Banner = () => {
                             >
                             <div className="banner_col1 pt-md-4">
                                     <h6 className="Main_Label pb-3"> 
-                                        <i className="fa-solid fa-star"></i> Top Products Of The Month</h6>
+                                        <i className="fa-solid fa-star"></i> Most Purchased Product Of The Month</h6>
                                     <h1>
                                         Dental Chair
                                     </h1>
                                     <p className="py-3">
-                                    Experience Comfort & Innovation 🦷✨ Upgrade your dental practice with our ergonomically designed Dental Chair, built for precision, patient comfort, and seamless functionality. Enhance efficiency with advanced features tailored for modern dentistry.
+                                    Experience Comfort & Innovation. Upgrade your dental practice with our ergonomically designed Dental Chair, built for precision, patient comfort, and seamless functionality. Enhance efficiency with advanced features tailored for modern dentistry.
                                     </p>
                                     <div className="banner_btns">
                                         <button className="main_btn">Shop Now</button>
@@ -98,6 +99,43 @@ const Banner = () => {
 
                 </div>
             </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className="container-fluid banner_1 py-5">
+                    <div className="container gx-0">
+                        <div className="row gx-0 align-items-center">
+                            <div className="col-md-12 col-lg-6"
+                                // data-aos="fade-right"
+                                // data-aos-duration="1000"
+                                // data-aos-easing="ease-in-out"
+                            >
+                                <div className="banner_col1 pt-md-4">
+                                    <h6 className="Main_Label pb-3"> 
+                                        <i className="fa-solid fa-star"></i> New Arrival With The Latest Technology</h6>
+                                    <h1>
+                                    Dental Tools & Equipment
+                                    </h1>
+                                    <p className="py-3">
+                                    Enhance your dental practice with top-quality handpieces and precision instruments. Shop our premium selection of dental equipment designed for efficiency, accuracy, and patient comfort.
+                                    </p>
+                                    <div className="banner_btns">
+                                        <button className="main_btn">Shop Now</button>
+                                     </div>
+                                </div>
+                            </div>
+                            <div className="col-md-12 col-lg-6"
+                                    // data-aos="fade-left"
+                                    // data-aos-duration="1000"
+                                    // data-aos-easing="ease-in-out"
+                            >
+                                <div className="banner3_img">
+                                    <img src={img3} alt="" className="img-fluid" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </SwiperSlide>
             {/* <SwiperSlide><div className="container-fluid Hero Hero2">
                 <div className="container gx-0">

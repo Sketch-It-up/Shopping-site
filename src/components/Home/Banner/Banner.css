@@ -51,6 +51,20 @@
     display: none !important;
 }
 
+.banner3_img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    margin-left: 12rem;
+    border-radius: 10px;
+    /* align-items: right; */
+}
+
+.banner3_img img{
+    border-radius: 10px;
+    /* align-items: right; */
+}
+
 /* ******************************* */
 /* ******************************* */
 @media only screen and (min-width: 768px) and (max-width:567px){
