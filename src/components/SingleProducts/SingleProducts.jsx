@@ -43,7 +43,7 @@ const SingleProducts = () => {
           <div className="col-md-6">
             <div className="single_Product2">
               <h2 className="single_Product-title">{product?.title}</h2>
-              <h3 className="single_Product-price">${product?.price}</h3>
+              <h3 className="single_Product-price">₹ {product?.price}</h3>
               <p className="single_Product-description">{product?.description}</p>
               <div className="carts-button">
                 <div className="quality-buttons my-4 py-3">
@@ -51,10 +51,18 @@ const SingleProducts = () => {
                   <span className="single-span mx-1">{quantity}</span>
                   <span className="single-span mx-1" onClick={increment}>+</span>
                 </div>
+
+                <div className="checkout-buttons">
                 <button className="btn3 py-3" onClick={() => handleAddToCart(product, quantity)}>
                   <i className="fa-solid fa-cart-shopping pe-2 fs-5"></i>
                   ADD TO CART
                 </button>
+                <button className="button-buy btn2 py-3" >
+                  <i className="fa-solid fa-bag-shopping pe-2 fs-5"></i>
+                  Buy Now
+                </button>
+                
+                </div>
                 <hr />
                 <div className="single-category py-2">
                   <span className="fw-bold fs-6">Category :</span>

@@ -16,7 +16,7 @@ const Category = ({category}) => {
             <div key={item.id} className="col-md-2 col-6"
             onClick={() => navigate(`/category/${item.id}`)}>
               <div className="home_category text-center">
-                <img src={ "http://localhost:1337/admin" + item?.img?.url} alt="" className="img-fluid"/>
+                <img src={ "http://localhost:1337/admin" + item?.img?.url} alt="" className="img-fluid2"/>
                 <h5 className="Category_title">{item?.title}</h5>
               </div>
             </div>

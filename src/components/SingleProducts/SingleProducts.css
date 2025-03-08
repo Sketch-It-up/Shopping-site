@@ -13,6 +13,17 @@
   margin: 0.5rem 1rem;
 }
 
+.checkout-buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.button-buy{
+  background-color: var(--success-color);
+}
+
 .single_Product1 img:hover {
   transform: scale(1.1);
   transition: 0.3s linear;

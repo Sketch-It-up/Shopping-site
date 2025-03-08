@@ -14,15 +14,16 @@ const Product = ({ id, title, description, price, img }) => {
           </div>
           <div className="card-body">
             <h4 className="Product_title">{title}</h4>
-            <p className="Product_name">{description}</p>
-            <div className="icons pb-2">
+            {/* <p className="Product_name">{description}</p> */}
+            <p></p>
+            <div className="icons pb-2 pt-2">
               <i className="fa-solid fa-star"></i>
               <i className="fa-solid fa-star"></i>
               <i className="fa-solid fa-star"></i>
               <i className="fa-solid fa-star"></i>
               <i className="fa-solid fa-star"></i>
             </div>
-            <h4 className="Product_price">${price}</h4>
+            <h4 className="Product_price">₹ {price}</h4>
           </div>
         </div>
       </div>
