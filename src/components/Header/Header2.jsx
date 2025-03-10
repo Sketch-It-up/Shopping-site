@@ -6,13 +6,19 @@ import CloseIcon from "../../assets/Menu_.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { NavLink } from "react-router-dom";
 import { Context } from "../../utils/context";
+import Search from "./Search/Search";
 
 const Header2 = ({ toggleCart }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const { cartCount } = useContext(Context);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const toggleSearch = () => {
+    setSearchOpen(!searchOpen);
   };
 
   return (
@@ -36,13 +42,8 @@ const Header2 = ({ toggleCart }) => {
           <a href="/contact">Contact</a>
 
           <div className="d-flex align-items-center">
-            <NavLink to="/search" className="nav-icon">
-              <i className="fas fa-search"></i>
-            </NavLink>
-            <i
-              className="fas fa-shopping-cart nav-icon"
-              onClick={toggleCart}
-            ></i>
+            <i className="fas fa-search nav-icon" onClick={toggleSearch}></i>
+            <i className="fas fa-shopping-cart nav-icon" onClick={toggleCart}></i>
           </div>
         </nav>
       </div>
@@ -54,8 +55,15 @@ const Header2 = ({ toggleCart }) => {
           <a href="/products" onClick={toggleMenu}>Products</a>
           <a href="/about" onClick={toggleMenu}>About</a>
           <a href="/contact" onClick={toggleMenu}>Contact</a>
+          <div className="mobile-nav-icons">
+            <i className="fas fa-search" onClick={toggleSearch}></i>
+            <i className="fas fa-shopping-cart" onClick={toggleCart}></i>
+          </div>
         </nav>      
       )}
+
+      {/* Search Overlay */}
+      {searchOpen && <Search toggleSearch={toggleSearch} />}
     </header>
   );
 };

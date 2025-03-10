@@ -17,9 +17,11 @@ import AppContext from "./utils/context";
 import Category from "./components/Category/Category";
 import Cart from "./components/cart/Cart";
 import { useState } from "react";
+import useFetch from "./hooks/useFetch";
 
 function App() {
   const [cartOpen, setCartOpen] = useState(false);
+  const { data: products, loading, error } = useFetch("api/products?populate=*");
 
   const toggleCart = () => {
     setCartOpen(!cartOpen);
@@ -34,7 +36,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/products" element={<AllProducts />} />
+            <Route path="/products" element={<AllProducts data={products} />} />
             <Route path="/product/:id" element={<SingleProducts />} />
             <Route path="/category/:id" element={<Category />} />
             <Route path="/contact" element={<Contact />} />

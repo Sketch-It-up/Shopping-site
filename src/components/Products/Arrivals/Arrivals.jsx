@@ -22,7 +22,7 @@ const Arrivals = () => {
                 <i className="fa-solid fa-star"></i>
                 <i className="fa-solid fa-star"></i>
               </div>
-              <h4 className="Product_price">$ 40</h4>
+              <h4 className="Product_price">₹ 40</h4>
             </div>
           </div>
           {/* /************************ */}

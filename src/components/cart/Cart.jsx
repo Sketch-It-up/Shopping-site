@@ -31,7 +31,7 @@ const Cart = ({ toggleCart }) => {
               <img src="https://cdn-icons-png.flaticon.com/512/13637/13637462.png" alt="Empty Cart" />
               <h6>Unfortunately, Your Cart is Empty</h6>
               <p>Please add something to your cart</p>
-              <button className="continue-btn">Continue Shopping</button>
+              <button className="continue-btn" onClick={toggleCart}>Continue Shopping</button>
             </div>
           )}
         </div>

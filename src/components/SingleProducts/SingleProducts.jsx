@@ -4,6 +4,7 @@ import useFetch from "../../hooks/useFetch";
 import { useParams } from "react-router-dom";
 import { useState, useContext } from "react";
 import { Context } from "../../utils/context";
+import RelatedProducts from "./RelatedProducts/RelatedProducts";
 
 const SingleProducts = () => {
   const [quantity, setQuantity] = useState(1);
@@ -53,22 +54,21 @@ const SingleProducts = () => {
                 </div>
 
                 <div className="checkout-buttons">
-                <button className="btn3 py-3" onClick={() => handleAddToCart(product, quantity)}>
-                  <i className="fa-solid fa-cart-shopping pe-2 fs-5"></i>
-                  ADD TO CART
-                </button>
-                <button className="button-buy btn2 py-3" >
-                  <i className="fa-solid fa-bag-shopping pe-2 fs-5"></i>
-                  Buy Now
-                </button>
-                
+                  <button className="btn3 py-3" onClick={() => handleAddToCart(product, quantity)}>
+                    <i className="fa-solid fa-cart-shopping pe-2 fs-5"></i>
+                    ADD TO CART
+                  </button>
+                  <button className="button-buy btn2 py-3">
+                    <i className="fa-solid fa-bag-shopping pe-2 fs-5"></i>
+                    Buy Now
+                  </button>
                 </div>
                 <hr />
                 <div className="single-category py-2">
                   <span className="fw-bold fs-6">Category :</span>
-                  <span className="ps-1">{product?.category?.data?.attributes?.title || "Category"}</span>
+                  <span className="ps-1">{product?.categories?.[0]?.title || "Category"}</span>
                 </div>
-                <span className="fw-bold fs-6">Brand: {product?.brand}</span>
+                {/* <span className="fw-bold fs-6">Brand: {product?.brand}</span> */}
                 <div className="single-social py-2">
                   <span className="fw-bold fs-6">Share</span>
                   <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
@@ -90,6 +90,10 @@ const SingleProducts = () => {
           </div>
         </div>
       </div>
+
+      {product?.categories?.[0]?.id && product?.id && (
+        <RelatedProducts categoryId={product.categories[0].id} productId={product.id} />
+      )}
     </div>
   );
 };
